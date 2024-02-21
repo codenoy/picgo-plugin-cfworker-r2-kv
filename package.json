@@ -1,7 +1,7 @@
 {
-  "name": "picgo-plugin-cloudflare-kv-backup",
+  "name": "picgo-plugin-cfworker-r2-kv",
   "version": "1.0.0",
-  "description": "cloudflare-kv-backup",
+  "description": "cloudflare-worker-r2-kv",
   "main": "src/index.js",
   "publishConfig": {
     "access": "public"
