@@ -1,6 +1,6 @@
 {
   "name": "picgo-plugin-cfworker-r2-kv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cloudflare-worker-r2-kv",
   "main": "src/index.js",
   "publishConfig": {
