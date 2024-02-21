@@ -46,10 +46,10 @@ const pluginConfig = ctx => {
     name: 'backup',
     type: 'list',
     alias: '备份源',
-    choices: uploaderList,
+    choices: ['', ...uploaderList],
     default: config.backup || '',
     message: '选择备份地址',
-    required: true
+    required: false
   }
   ]
 }
@@ -117,8 +117,9 @@ module.exports = (ctx) => {
           throw new Error('cloudflare-kv-backup has no config')
         }
         const backup = backupLoaderConfig.backup
+        // 没设置备份, 直接返回
         if (!backup) {
-          throw new Error('backup uploader not config')
+          return ctx
         }
         const uploader = ctx.helper.uploader.get(backup)
         if (!uploader) {
